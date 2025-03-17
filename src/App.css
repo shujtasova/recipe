@@ -35,6 +35,7 @@ video {
   color: #575756;
   box-shadow: inset 0px 0px 0px 4px #ddd6e8;
   border-radius: 12px;
+  font-size: 16px;
 }
 
 .center {
