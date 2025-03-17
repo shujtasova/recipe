@@ -42,33 +42,33 @@ function App() {
         <h1>Find a Recipe</h1>
       </div>
 
-      <div className="container">
-        <form onSubmit={finalSearch}>
+      <div className="search-container">
+        <form onSubmit={finalSearch} className="form-container">
           <input
             className="search"
             onChange={myRecipeSearch}
             value={mySearch}
           />
+          <button onClick={finalSearch}>
+            <img
+              src="https://img.icons8.com/fluency/48/000000/fry.png"
+              alt="icon"
+            />
+          </button>
         </form>
       </div>
 
-      <div className="container">
-        <button onClick={finalSearch}>
-          <img
-            src="https://img.icons8.com/fluency/48/000000/fry.png"
-            alt="icon"
+      <div className="recipies">
+        {myRecipes.map((element, index) => (
+          <MyRecipesComponent key={index}
+            label={element.recipe.label}
+            image={element.recipe.image}
+            calories={element.recipe.calories}
+            ingredients={element.recipe.ingredientLines}
           />
-        </button>
+        ))}
       </div>
 
-      {myRecipes.map((element, index) => (
-        <MyRecipesComponent key={index}
-          label={element.recipe.label}
-          image={element.recipe.image}
-          calories={element.recipe.calories}
-          ingredients={element.recipe.ingredientLines}
-        />
-      ))}
     </div>
   );
 }

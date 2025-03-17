@@ -17,12 +17,24 @@ video {
   justify-content: center;
 }
 
+.search-container {
+  display: flex;
+  justify-content: center;
+}
+.form-container {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  width: 50%;
+  align-items: center;
+}
 .search {
   width: 100%;
   padding: 12px 24px;
   background-color: transparent;
   color: #575756;
   box-shadow: inset 0px 0px 0px 4px #ddd6e8;
+  border-radius: 12px;
 }
 
 .center {
@@ -32,12 +44,13 @@ video {
 .list {
   display: flex;
   flex-direction: column;
-  align-items: center;
   list-style-type: none;
-  background-color: #ddd6e8;
-  padding: 10px;
-  margin-left: 10px;
-  width: 50%;
+  padding: 0;
+}
+li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 h1,
@@ -52,11 +65,33 @@ p {
 }
 
 button {
-  margin-top: 10px;
   border-radius: 12px;
   border: none;
   background-color: #dbecc4;
   cursor: pointer;
 }
 
+.recipies {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 20px;
+}
+.recipe {
+  display: flex;
+  flex-direction: column;
+  background-color: #ddd6e8;
+  width: 40%;
+  border-radius: 12px;
+}
+.dish-img {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+.description {
+  padding: 0 40px;
+}
 
